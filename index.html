@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DUAtris</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+<div id="intro-screen">
+
+  <div class="puerta izquierda"></div>
+  <div class="puerta derecha"></div>
+
+<div class="intro-contenido">
+  <h1>DUATRIS</h1>
+
+  <p class="intro-text">
+    MISIÓN: Reconstruir el sistema educativo aplicando los principios del DUA.
+  </p>
+
+  <p class="intro-text">
+    INSTRUCCIÓN:<br>
+    Cada bloque representa una estrategia educativa.<br>
+    Debes hacer clic en la columna correcta:
+  </p>
+
+  <ul>
+    <li>Representación</li>
+    <li>Acción y Expresión</li>
+    <li>Compromiso</li>
+  </ul>
+
+  <button id="startBtn">INICIAR SISTEMA</button>
+</div>
+
+
+</div>
+
+
+
+
+<div class="bg"></div>
+
+<h1>DUATRIS // RECONSTRUYE EL APRENDIZAJE</h1>
+<p>Clasifica cada estrategia en su principio DUA</p>
+
+<div id="game">
+
+  <div class="columns">
+
+        <!-- CANAL DE CAÍDA -->
+    <div id="drop-zone">
+      <div id="block"></div>
+    </div>
+
+
+    <div class="col" data-type="rep">
+      <h2>Representación</h2>
+    </div>
+
+
+    <div class="col" data-type="acc">
+      <h2>Acción y Expresión</h2>
+    </div>
+
+    <div class="col" data-type="com">
+      <h2>Compromiso</h2>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="info"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
