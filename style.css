@@ -83,7 +83,7 @@ margin:15px 0;
   top: 0;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to bottom, #0a0a0a, #111827);
+  background: linear-gradient(to bottom, #ffffff, #111827);
   transition: 1.2s ease;
   z-index: 1;
 }
