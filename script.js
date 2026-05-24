@@ -65,7 +65,7 @@ function spawn(){
   y = 0;
   block.style.top = "0px";
 
-  const limit = dropZone.offsetHeight - 80;
+  const limit = dropZone.offsetHeight - block.offsetHeight - 20;
 
   falling = setInterval(() => {
 

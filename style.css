@@ -156,21 +156,34 @@ transition:0.3s;
 
 .columns{
 display:flex;
-justify-content:space-around;
+justify-content:center;
 align-items:flex-end;
+gap:20px;
 height:70vh;
 padding:20px;
+flex-wrap:wrap;
 }
 
 /* CANAL CENTRAL */
 #drop-zone{
-width:200px;
-height:100%;
+width:min(220px, 30vw);
+
+min-width:140px;
+
+/* 👇 IMPORTANTE */
+height:65vh;
+min-height:420px;
+
 position:relative;
+
 border:2px solid rgba(0,255,255,0.2);
 border-radius:15px;
+
 background:rgba(0,0,0,0.2);
+
 box-shadow: inset 0 0 20px rgba(0,255,255,0.1);
+
+overflow:hidden;
 }
 
 /* BLOQUE CAE SOLO EN ESTE CANAL */
@@ -179,26 +192,38 @@ position:absolute;
 top:0;
 left:50%;
 transform:translateX(-50%);
-padding:15px;
+padding:12px;
 background:#111;
 border:2px solid #00ffff;
 border-radius:10px;
 box-shadow:0 0 15px cyan;
-width:160px;
+width:min(160px, 24vw);
+min-width:100px;
 text-align:center;
+font-size:clamp(12px,1.5vw,16px);
+word-wrap:break-word;
 }
 
 .col{
-width:30%;
-height:80%;
+flex:1;
+min-width:180px;
+max-width:250px;
+height:60vh;
+
 border:2px dashed rgba(255,255,255,0.2);
 border-radius:15px;
+
 position:relative;
+
 display:flex;
 flex-direction:column;
 justify-content:flex-end;
+
 padding:10px;
+
+transition:0.3s;
 }
+
 
 .col h2{
 font-size:16px;
@@ -211,14 +236,94 @@ color:black;
 padding:8px;
 margin:5px 0;
 border-radius:8px;
-font-size:14px;
+font-size:clamp(11px,1.2vw,14px);
 box-shadow:0 0 10px cyan;
 }
 
 #info{
-margin-top:-555px;
-font-size:25px;
+margin-top:20px;
+font-size:clamp(16px, 2vw, 25px);
 color:#00ffff;
-
 text-shadow:0 0 15px cyan;
+min-height:40px;
+padding:10px;
+}
+
+
+/*responsive*/
+
+@media (max-width: 768px){
+
+  #intro-screen{
+  
+position:fixed;
+
+width:93%;
+height:100%;
+background:#050510;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:999;
+text-align:center;
+padding:20px;
+}
+
+
+  #info{
+margin-top:-580px;
+font-size:clamp(16px, 2vw, 25px);
+color:#00ffff;
+text-shadow:0 0 15px cyan;
+min-height:40px;
+padding:10px;
+}
+
+
+
+  h1{
+    font-size:20px;
+    padding:0 10px;
+  }
+
+  p{
+    font-size:14px;
+  }
+
+  .columns{
+    gap:10px;
+    padding:10px;
+    height:60vh;
+  }
+
+  #drop-zone{
+    width:120px;
+    min-width:120px;
+    height:55vh;
+    min-height:320px;
+  }
+
+  #block{
+    width:95px;
+    font-size:11px;
+    padding:8px;
+  }
+
+  .col{
+    min-width:18px;
+    height:55vh;
+    padding:6px;
+  }
+
+  .col h2{
+    font-size:11px;
+  }
+
+  .item{
+    font-size:10px;
+    padding:5px;
+  }
+
+ 
 }
